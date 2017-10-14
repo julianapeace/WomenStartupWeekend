@@ -3,9 +3,20 @@ nav{
   font-size: 18px;
   line-height: 50px;
 }
-label{
+label {
   text-transform: uppercase;
   font-weight: bold;
+	/*box-sizing: border-box;*/
+	/*display: block;*/
+	height: 100%;
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+	/*cursor: pointer;*/
+	opacity: .5;
+	transition: all .5s ease-in-out;
+	&:hover, &:focus, &:active {
+		border: 1px solid rgba(#ddd,.5);
+	}
 }
 footer{
   padding: 10px;
@@ -17,15 +28,10 @@ footer{
   height: 100vh;
   position: relative;
 }
-
-.jumbotron>h1{
-  /*text-align: right;
-  color: #000;*/
-}
 .jumbotron>img{
   position:absolute;
-  top: 0;
-  left: 0;
+  top: 5px;
+  left: 5px;
 }
 .jumbotron-paygap{
   position: absolute;
@@ -39,23 +45,29 @@ footer{
   padding: 0;
   margin:0;
 }
+.calculator{
+  height: 100vh;
+}
 #calculator{
-  margin-left: 50vh;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 0 auto;
   max-width: 600px;
-  border: 1px solid blue;
+  width: 50%;
+  border: 1px solid #ddd;
   padding: 20px;
-  line-height: 40px;
 }
 #calculator-result{
-  margin-left: 50vh;
-  margin-top: 50px;
+  margin: 0 auto;
   max-width: 600px;
-  border: 1px solid blue;
-  padding: 10px;
+  width: 50%;
+  border: 1px solid #ddd;
+  padding: 40px;
+  height: 100vh;
 }
-
+.calculator-result{
+  background-color: rgba(255, 0, 0, 0.5);
+  color: #fff;
+  padding:10px;
+}
 .vertical-center {
   min-height: 100%;
   /* Fallback for browsers do NOT support vh unit */
@@ -69,19 +81,10 @@ footer{
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900');
 
 /* Form Styles */
-
-.form {
-	max-width: 610px;
-	margin: 60px auto;
-}
-.form__options {
-	border: none;
-	padding: 0;
-}
 .form__answer {
 	display: inline-block;
 	/*box-sizing: border-box;*/
-	width: 40%;
+	width: 45%;
   border: 3px solid #ddd;
 	/*margin: 20px 1% 20px 0;*/
   margin: 0px 0% 0px 0;
@@ -90,21 +93,6 @@ footer{
 	font-size: 15px;
   line-height: 5px;
 	text-align: center;
-}
-
-label {
-	border: 1px solid rgba($font-color,.15);
-	box-sizing: border-box;
-	display: block;
-	height: 100%;
-	width: 100%;
-	padding: 10px 10px 30px 10px;
-	cursor: pointer;
-	opacity: .5;
-	transition: all .5s ease-in-out;
-	&:hover, &:focus, &:active {
-		border: 1px solid rgba($font-color,.5);
-	}
 }
 
 .form__button {
@@ -148,18 +136,29 @@ input[type="radio"]:checked ~ label {
   .navbar {
     width: 100%;
 }
-
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .navbar {
     width: 100%;
   }
 }
-
-@media all and (min-width: 480px) and (max-width: 768px) {}
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .jumbotron{
+    height: 100vh;
+  }
+  h1{
+    color: #fff;
+  }
+}
 
 @media all and (max-width: 480px) {
   .navbar {
     width: 100%;
+  }
+  h1{
+    color: #fff;
+  }
+  .jumbotron{
+    height: 100vh;
   }
 }
 

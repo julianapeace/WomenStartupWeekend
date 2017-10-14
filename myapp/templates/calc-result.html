@@ -1,12 +1,12 @@
-{% extends "base.html" %}
-{% block jumbotron%}{% endblock %}
-
-{% block calcresult %}
+{% extends "base.html" %} {% block jumbotron%}{% endblock %} {% block calcresult %}
 <div id="calculator-result">
-<h1>You make ${{ '%0.1f' | format(result|float) }} less than male equivalent</h1>
-<br>
-<h5>The equivalent male makes: ${{ '%0.1f' | format(salarymen|float) }} </h5>
+  <div class="calculator-result">
+    <h2>pay_gap</h2>
+  </div>
+  <h1>You make ${{ '%0.1f' | format(result|float) }} less than male equivalent</h1>
+  <br>
+  <h5>The equivalent male makes: ${{ '%0.1f' | format(salarymen|float) }} </h5>
 
-<a href="/" class="btn btn-outline-primary">OK</a>
+  <a href="/" class="btn btn-outline-primary">OK</a>
 </div>
 {% endblock %}

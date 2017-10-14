@@ -1,78 +1,86 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block calculator %}
 <div id="calculator">
-<h4>Pay Sally Gender Pay Gap Calculator</h4>
-<h2>What could you be making?</h2>
-<h4>The gender wage gap has lowered pay for working women, and growing inequality affects nearly everyone who works.</h4>
-<p style="color: blue;">Enter your information to find out how much you could be paid in a more equal economy.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
 
-<form class="" action="/calculator" method="post">
-<fieldset class="form__options">
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-8 col-sm-8">
-      <label for="gender">Gender</label>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <label for="age">Age</label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-8 col-md-8 col-sm-8">
 
-      <p class="form__answer">
-        <input type="radio" name="gender" id="female" value="guy" checked>
-        <label for="female">
+
+        <h4>Pay Sally Gender Pay Gap Calculator</h4>
+        <h2>What could you be making?</h2>
+        <h4>The gender wage gap has lowered pay for working women, and growing inequality affects nearly everyone who works.</h4>
+        <p style="color: blue;">Enter your information to find out how much you could be paid in a more equal economy.</p>
+
+        <form class="" action="/calculator" method="post">
+          <fieldset class="form__options">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                  <label for="gender">Gender</label>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <label for="age">Age</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8">
+
+                  <p class="form__answer">
+                    <input type="radio" name="gender" id="female" value="guy" checked>
+                    <label for="female">
           Female
         </label>
-      </p>
+                  </p>
 
-      <p class="form__answer">
-        <input type="radio" name="gender" id="male" value="guy" checked>
-        <label for="male">
+                  <p class="form__answer">
+                    <input type="radio" name="gender" id="male" value="guy" checked>
+                    <label for="male">
           Male
         </label>
-      </p>
+                  </p>
 
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-4">
-      <input class="form-control form-control-lg" type="number" step="1" size="" placeholder="30" name="age" value="">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <label for="education">Education</label>
-    </div>
-    <div class="col-lg-12">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <input class="form-control form-control-lg" type="number" step="1" size="" placeholder="30" name="age" value="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <label for="education">Education</label>
+                </div>
+                <div class="col-lg-12">
 
-      <p class="form__answer">
-				<input type="radio" name="education" id="match_1" value="guy" checked>
-				<label for="match_1">
+                  <p class="form__answer">
+                    <input type="radio" name="education" id="match_1" value="guy" checked>
+                    <label for="match_1">
 					Bachelor's Degree
 				</label>
-			</p>
+                  </p>
 
-      <p class="form__answer">
-        <input type="radio" name="education" id="match_1" value="guy" checked>
-        <label for="match_1">
+                  <p class="form__answer">
+                    <input type="radio" name="education" id="match_1" value="guy" checked>
+                    <label for="match_1">
           No Bachelor's Degree
         </label>
-      </p>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <label for="salary">Annual Salary</label>
+                </div>
+                <div class="col-lg-12">
+                  <input class="form-control form-control-lg" type="number" placeholder="30,000" name="salary" value="">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <p>How much does gender affect your pay?</p>
+          <button type="submit" class="btn btn-primary" name="button">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <label for="salary">Annual Salary</label>
-    </div>
-    <div class="col-lg-12">
-      <input class="form-control form-control-lg" type="number" placeholder="30,000" name="salary" value="">
-    </div>
-  </div>
-</div>
-</fieldset>
-<p>How much does gender affect your pay?</p>
-<button type="submit" class="btn btn-primary" name="button">Submit</button>
-</form>
 </div>
 {% endblock %}
