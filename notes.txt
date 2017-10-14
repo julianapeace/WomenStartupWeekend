@@ -1,0 +1,20 @@
+Web app
+-Return census data
+- Using this website:
+https://www.census.gov/data/developers/data-sets/acs-1year.html
+
+api key:
+e36c64ad9bd505760e317fb61b63c03717bc68ff
+
+base uri:
+https://api.census.gov/data/timeseries/qwi/
+
+example api call:
+
+api.census.gov/data/timeseries/qwi/sa?get=Emp&for=county:198&in=state:02&year=2012&quarter=1&sex=1&sex=2&agegrp=A02&agegrp=A07&ownercode=A05&firmsize=1&seasonadj=U&industry=11&key=[userkey]
+
+https://api.census.gov/data/timeseries/qwi/sa?get=Emp&for=state:02&year=2012&key=e36c64ad9bd505760e317fb61b63c03717bc68ff
+
+
+bureau of labor statistics
+080c3cec1e5d49ff8bdc40011d490719

@@ -1,0 +1,167 @@
+nav{
+  font-family:'Quicksand', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 50px;
+}
+label{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+footer{
+  padding: 10px;
+  background-color: #ddd;
+  font-size: 80%;
+}
+.jumbotron {
+  background-image: url("/static/img/woman-working.jpg");
+  height: 100vh;
+  position: relative;
+}
+
+.jumbotron>h1{
+  /*text-align: right;
+  color: #000;*/
+}
+.jumbotron>img{
+  position:absolute;
+  top: 0;
+  left: 0;
+}
+.jumbotron-paygap{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 100px;
+  min-width: 100vh;
+  min-width: 100%;
+  align-items: center;
+  padding: 0;
+  margin:0;
+}
+#calculator{
+  margin-left: 50vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 600px;
+  border: 1px solid blue;
+  padding: 20px;
+  line-height: 40px;
+}
+#calculator-result{
+  margin-left: 50vh;
+  margin-top: 50px;
+  max-width: 600px;
+  border: 1px solid blue;
+  padding: 10px;
+}
+
+.vertical-center {
+  min-height: 100%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 70vh;
+  /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+/* Font from Google fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900');
+
+/* Form Styles */
+
+.form {
+	max-width: 610px;
+	margin: 60px auto;
+}
+.form__options {
+	border: none;
+	padding: 0;
+}
+.form__answer {
+	display: inline-block;
+	/*box-sizing: border-box;*/
+	width: 40%;
+  border: 3px solid #ddd;
+	/*margin: 20px 1% 20px 0;*/
+  margin: 0px 0% 0px 0;
+	height: 50px;
+	vertical-align: top;
+	font-size: 15px;
+  line-height: 5px;
+	text-align: center;
+}
+
+label {
+	border: 1px solid rgba($font-color,.15);
+	box-sizing: border-box;
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 10px 10px 30px 10px;
+	cursor: pointer;
+	opacity: .5;
+	transition: all .5s ease-in-out;
+	&:hover, &:focus, &:active {
+		border: 1px solid rgba($font-color,.5);
+	}
+}
+
+.form__button {
+	height: 40px;
+	border: none;
+	text-transform: uppercase;
+	font-family: 'Source Sans Pro', sans-serif;
+	padding: 0 20px;
+	border-radius: 20px;
+	font-weight: 900;
+	cursor: pointer;
+	margin: 20px 0;
+	transition: all .25s ease-in-out;
+	&:hover, &:focus {
+		background-color: $submit-color-darker;
+		text-shadow: 1px 1px 1px rgba(0,0,0,.25);
+		outline: none;
+	}
+}
+
+
+/* Input style */
+
+input[type="radio"] {
+	opacity: 0;
+	width: 0;
+  height: 0;
+}
+
+input[type="radio"]:active ~ label {
+  opacity: 1;
+}
+
+input[type="radio"]:checked ~ label {
+  opacity: 1;
+	border: 1px solid $font-color;
+}
+
+
+@media all and (min-width: 1024px) {
+  .navbar {
+    width: 100%;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {}
+
+@media all and (max-width: 480px) {
+  .navbar {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+}

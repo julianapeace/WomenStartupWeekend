@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>{%block title%}Pay Sally{% endblock %}</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">PaySally</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#calculator">PayGap Calculator</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Areas of Research</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Publication</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+{% block jumbotron %}
+<div class="jumbotron vertical-center jumbotron-fluid">
+  <img src="/static/img/white-logo.png" alt="" style="width: 15%;">
+  <div class="container">
+    <div class="row jumbotrontext">
+      <div class="col-lg-6">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-6">{% block jumbotrontext %}Alex, a women aged <strong>24-35</strong> with a <strong>Bachelor's degree</strong> who works in <u>material fabrication</u> <u>full-time</u> makes 52&#162; for each $1 a similar man makes{% endblock %}</h1>
+      </div>
+    </div>
+    <div class="row jumbotron-paygap">
+      <div class="col-lg-8">
+        <h2>The pay gap runs deeper than one number. <strong>Find out yours:</strong></h2>
+      </div>
+      <div class="col-lg-4">
+        <a href="#calculator" class="btn btn-outline-secondary">What's My PayGap?</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+    {% block content %}{% endblock %}
+
+  {% block calcresult %}{% endblock %}
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h4>Pay Sally</h4>
+          <p>PaySally is an independent, nonprofit think tank that researches the impact of economic trends and policies on working people in the United States. PaySally’s research helps policymakers, opinion leaders, advocates, journalists, and the public understand the bread-and-butter issues affecting ordinary Americans.</p>
+          <h3>Follow PaySally</h3>
+          <p>1225 Eye St. NW, Suite 600
+            Washington, DC 20005
+            Phone: 202-775-8810 • epi@epi.org
+            ©2016 Economic Policy Institute
+            Privacy Policy • Contact Us</p>
+        </div>
+        <div class="col-lg-4">
+          <p>Projects</p>
+          <a href="#"><strong>The Perkins Project on Worker Rights and Wages</strong></a>
+          <p>Tracking the wage and employment policies coming out of the White House, Congress, and the courts.</p>
+          <a href="#"><strong>Raising America’s Pay</strong></a>
+          <p>A research and public education initiative to make wage growth an urgent national policy priority.</p>
+          <a href="#"><strong>State of Working America</strong></a>
+          <p>The authoritative analysis of the living standards of American workers.</p>
+          <a href="#"><strong>Inequality.is</strong></a>
+          <p>Interactive tools and videos bringing clarity to the national dialogue on economic inequality.</p>
+          <br>
+          <p>Affiliate Programs</p>
+          <a href="#"><strong>Economic Analysis and Research Network (EARN)</strong></a>
+          <p>A network of state and local organizations improving workers' lives through research and advocacy.</p>
+        </div>
+        <div class="col-lg-4">
+          <h5>About PaySally</h5>
+          <p>
+          <a href="http://www.epi.org/about/staff/">Staff</a><br>
+          <a href="http://www.epi.org/about/board/">Board of Directors</a><br>
+          <a href="http://www.epi.org/about/jobs/">Jobs at PaySally</a><br>
+          <a href="http://www.epi.org/about/contact/">Contact us</a><br>
+          <a href="http://www.epi.org/why-give/">Why give to PaySally</a><br>
+          <a href="http://www.epi.org/newsroom/">Newsroom</a><br>
+          <a href="http://www.epi.org/signup/">Newsletter</a><br>
+          <a href="http://www.epi.org/events/">Events</a><br>
+          <a href="http://www.epi.org/give/">Donate</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  </body>
+</html>
