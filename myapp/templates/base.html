@@ -4,22 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/static/js/paysally.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/static/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet"><link rel="stylesheet" href="/static/css/style.css">
   <title>{%block title%}Pay Sally{% endblock %}</title>
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">PaySally</a>
+    <h1 id="header" style="position: fixed; padding: 0 0 10px 10px;"><a href="/">pay_sally</a></h1>
+    <a class="navbar-brand" href="/"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#calculator">PayGap Calculator</a>
+          <a class="nav-link" href="/page/calculator.html">Pay_Gap Calculator</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
@@ -28,7 +31,7 @@
           <a class="nav-link" href="#">Areas of Research</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Publication</a>
+          <a class="nav-link" href="/page/solution.html">Game_Plan</a>
         </li>
       </ul>
     </div>
@@ -36,41 +39,40 @@
 
   {% block jumbotron %}
   <div class="jumbotron vertical-center jumbotron-fluid">
-    <img src="/static/img/white-logo.png" alt="" style="width: 15%;">
+    <img src="/static/img/white-logo-sm.png" alt="" style="width: 15%;">
     <div class="container">
       <div class="row jumbotrontext">
         <div class="col-lg-6">
         </div>
         <div class="col-lg-6">
-          <h1 class="display-6" style="text-align: right;">{% block jumbotrontext %}Alex, a women aged <u>24-35</u> with a <u>Bachelor's degree</u> who works in <u>material fabrication</u> <u>full-time</u> makes 52&#162; for each $1 a similar man makes{% endblock %}</h1>
+          <h1 class="display-6">{% block jumbotrontext %}Alex, a woman in Houston aged <u>24-35</u> with a <u>Bachelor's degree</u> who works in <u>healthcare</u> <u>full-time</u> makes 79&#162; for each $1 a similar man makes{% endblock %}</h1>
         </div>
       </div>
       <div class="row jumbotron-paygap">
-        <div class="col-lg-8">
-          <h2>The pay gap runs deeper than one number. <strong>Find out yours:</strong></h2>
+        <div class="col-lg-8 col-md-8 col-sm-12">
+          <h2>The pay gap runs deeper than one number. <strong style="font-size: 30px;">Find out yours:</strong></h2>
         </div>
-        <div class="col-lg-4">
-          <a href="#calculator" class="btn btn-outline-secondary">What's My PayGap?</a>
+        <div class="col-lg-4 col-md-8 col-sm-12">
+          <a href="/page/calculator.html" class="btn btn-outline-secondary btn-lg">What's My PayGap?</a>
         </div>
       </div>
     </div>
   </div>
   {% endblock %}
-  <div class="calculator">
     {% block calculator %}{% endblock %}
-  </div>
   {% block calcresult %}{% endblock %}
-  <footer>
-    <div class="container">
+  {% block solution %}{% endblock %}
+
+  <footer id="footer">
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-12">
           <h5>Pay Sally</h5>
           <p>PaySally is an independent, nonprofit think tank that researches the impact of economic trends and policies on working people in the United States. PaySally’s research helps policymakers, opinion leaders, advocates, journalists, and the public
             understand the bread-and-butter issues affecting ordinary Americans.</p>
           <h4>Follow PaySally</h4>
-          <p>1225 Eye St. NW, Suite 600 Washington, DC 20005 Phone: 202-775-8810 • epi@epi.org ©2016 Economic Policy Institute Privacy Policy • Contact Us</p>
+          <p>1225 Eye St. NW, Suite 600 Washington, DC 20005 Phone: 202-775-8810 • hello@paysally.com ©2017 PaySally Privacy Policy • Contact Us</p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-12">
           <p>Projects</p>
           <a href="#"><strong>The Perkins Project on Worker Rights and Wages</strong></a>
           <p>Tracking the wage and employment policies coming out of the White House, Congress, and the courts.</p>
@@ -85,7 +87,7 @@
           <a href="#"><strong>Economic Analysis and Research Network (EARN)</strong></a>
           <p>A network of state and local organizations improving workers' lives through research and advocacy.</p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4 col-sm-12">
           <h5>About PaySally</h5>
           <p>
             <a href="http://www.epi.org/about/staff/">Staff</a><br>
@@ -100,8 +102,6 @@
           </p>
         </div>
       </div>
-
-    </div>
   </footer>
 </body>
 

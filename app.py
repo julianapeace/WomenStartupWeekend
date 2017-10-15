@@ -28,14 +28,31 @@ class MainHandler(TemplateHandler):
 class CalcHandler(TemplateHandler):
     def post(self):
         salary = int(self.get_body_argument('salary'))
-        salarymen = salary/.79
-        result = salarymen - salary
-        self.render_template("calc-result.html", {'result':result, 'salarymen': salarymen})
+        gender = self.get_body_argument('gender')
+        if gender =='female':
+            opsalary = salary/.79
+            opgender = 'male'
+            moreless = 'less'
+            result = opsalary - salary
+        else:
+            opsalary = salary * .79
+            opgender = 'female'
+            moreless = 'more'
+            result = -(opsalary - salary)
 
+        self.render_template("calc-result.html", {'result':result, 'opsalary': opsalary, 'salary': salary, 'opgender':opgender, 'moreless': moreless, 'gender':gender})
+class PageHandler(TemplateHandler):
+    def get(self, page):
+        self.set_header(
+            'Cache-Control',
+            'no-store, no-cache, must-revalidate, max-age=0')
+        self.render_template(page, {})
 def make_app():
     return tornado.web.Application([
     (r"/", MainHandler),
     (r"/calculator", CalcHandler),
+    (r"/page/(.*)", PageHandler),
+
     (
       r"/static/(.*)",
       tornado.web.StaticFileHandler,
