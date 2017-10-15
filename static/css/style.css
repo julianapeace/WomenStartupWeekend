@@ -5,6 +5,8 @@ footer{
   padding: 30px;
   background-color: #ddd;
   font-size: 80%;
+  margin: 100%;
+  margin: 0 auto;
 }
 #header>a{
   color: #000;
@@ -17,6 +19,7 @@ JUMBOTRON
 .jumbotron {
   background: url("/static/img/woman-working.jpg") no-repeat center top;
   height: 100vh;
+  /*width: 100vh;*/
   position: relative;
 }
 .jumbotron>img{
@@ -36,7 +39,6 @@ JUMBOTRON
   left: 0;
   background-color: rgba(255, 255, 255, 0.6);
   height: 100px;
-  min-width: 100vh;
   min-width: 100%;
   align-items: center;
   padding: 0;
@@ -47,10 +49,10 @@ JUMBOTRON
 SOLUTION
 
 *******************************************************/
-.solutionsteps{
+.solution{
   font-family: 'Arvo', 'Quicksand', Helvetica, monospace;
   margin: 10px auto;
-  width: 850px;
+  width: 70%;
   padding: 40px;
   min-height: 100vh;
   height: 100%;
@@ -151,8 +153,28 @@ BOOTSTRAP
 @media all and (max-width: 480px) {
   h1{
     font-size: 30px;
+    color: #eee;
+    text-shadow: 1px 0 0 #000;
   }
   h2{
     font-size:20px;
   }
+  .jumbotron>img{
+    display: none;
+  }
+  .jumbotron{
+    max-height: 100vh;
+    max-width: 100vh;
+  }
+  .solution{
+    padding: 0;
+    width: 100%;
+  }
+  h3{
+    font-size: 20px;
+  }
+  .jumbotron-paygap{
+    height: 150px;
+  }
+  .jumbotron-paygap >h3{font-size: 15px;}
 }
